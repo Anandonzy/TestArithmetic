@@ -7,7 +7,7 @@ import java.util.Scanner;
  * User: @ziyu  freedomziyua@gmail.com
  * Date: 2019-03-28
  * Time: 9:59
- * Description:二分查找：已经是拍好顺序的。
+ * Description:二分查找：已经是排好顺序的。
  */
 public class BinarySearch {
 
