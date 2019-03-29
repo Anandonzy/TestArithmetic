@@ -29,9 +29,9 @@ public class BinarySearch {
         while (start <= end) {
             //防止加法超出界限 或者 mid= start + ((end-start) >>1)
             int mid = start + (end - start) / 2;
-            if (key < mid) {
+            if (key < arr[mid]) {
                 end = mid - 1;
-            } else if (key < mid) {
+            } else if (key < arr[mid]) {
                 start = mid + 1;
             } else {
                 return mid;
