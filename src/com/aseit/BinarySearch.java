@@ -31,7 +31,7 @@ public class BinarySearch {
             int mid = start + (end - start) / 2;
             if (key < arr[mid]) {
                 end = mid - 1;
-            } else if (key < arr[mid]) {
+            } else if (key > arr[mid]) {
                 start = mid + 1;
             } else {
                 return mid;
