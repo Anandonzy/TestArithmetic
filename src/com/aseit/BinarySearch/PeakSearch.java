@@ -1,4 +1,6 @@
-package com.aseit;
+package com.aseit.BinarySearch;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -38,6 +40,7 @@ public class PeakSearch {
     public static void main(String args[]) {
 
         int[] arr = new int[]{1,2,3,4,1};
+//        answer(arr);
         int search = binarySearch(arr);
         System.out.println(search);
     }
@@ -92,4 +95,6 @@ public class PeakSearch {
         }
         return -1;
     }
+
+
 }

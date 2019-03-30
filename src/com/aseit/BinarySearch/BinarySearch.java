@@ -1,4 +1,4 @@
-package com.aseit;
+package com.aseit.BinarySearch;
 
 import java.util.Scanner;
 

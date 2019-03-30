@@ -1,4 +1,4 @@
-package com.aseit;
+package com.aseit.BinarySearch;
 
 /**
  * Created with IntelliJ IDEA.
@@ -33,8 +33,9 @@ public class FirstShowSearch {
 
     public static void main(String args[]) {
 
-        int[] arr = {1,4,4,5,7,7,8,9,9,10};
-        System.out.println(search(arr, 1));
+        int[] arr = {1, 2, 3, 3, 4, 5, 10};
+//        System.out.println(arr.length);
+        System.out.println(answer(arr, 3));
     }
 
     public static int search(int[] arr, int target) {
@@ -48,5 +49,35 @@ public class FirstShowSearch {
             mid = start + (end - start) / 2;
         }
         return arr[mid] == target ? mid : -1;
+    }
+
+    /**
+     * 提供的标准答案。
+     *
+     * @param arr
+     * @param target
+     * @return
+     */
+    public static int answer(int[] arr, int target) {
+        int start = 0;
+        int end = arr.length - 1;
+        System.out.println("   end :" + end);
+        int res = -1;
+
+        while (start <= end) {
+            int mid = start + ((end - start) >> 1);
+            if (arr[mid] >= target) {
+                end = mid - 1;
+                res = mid;
+            } else {
+                start = mid + 1;
+            }
+        }
+
+        if (res != -1 && arr[res] != target) {
+            return -1;
+        }
+
+        return res;
     }
 }
