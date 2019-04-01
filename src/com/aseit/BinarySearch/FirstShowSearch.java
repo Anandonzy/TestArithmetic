@@ -34,8 +34,8 @@ public class FirstShowSearch {
     public static void main(String args[]) {
 
         int[] arr = {1, 2, 3, 3, 4, 5, 10};
-//        System.out.println(arr.length);
-        System.out.println(answer(arr, 3));
+//        System.out.println(answer(arr, 3));
+        System.out.println(binarySearch(arr, 3));
     }
 
     public static int search(int[] arr, int target) {
@@ -79,5 +79,38 @@ public class FirstShowSearch {
         }
 
         return res;
+    }
+
+
+    //九章
+    public static int binarySearch(int[] nums, int target) {
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+        int start = 0, end = nums.length - 1;
+        //相邻就退出循环
+        //start = 1 ,end = 2 就要退出循环
+        while (start + 1 < end) {
+
+            //zhuang biu
+            int mid = (end - start) / 2 + start;
+            if (nums[mid] == target) {
+                end = mid;
+            } else if (target < nums[mid]) {
+                //end = mid -1
+                end = mid;
+            } else {
+                start = mid;
+            }
+        }
+        //double check
+        if (nums[start] == target) {
+            return start;
+        }
+
+        if (nums[end] == target) {
+            return end;
+        }
+        return -1;
     }
 }

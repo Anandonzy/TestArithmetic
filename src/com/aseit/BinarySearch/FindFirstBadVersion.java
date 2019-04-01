@@ -25,6 +25,7 @@ public class FindFirstBadVersion  {
 
         int start = 1, end = n;
 
+
         while (start + 1 < end) {
             int mid = start + ((end - start) >> 1);
 

@@ -13,14 +13,16 @@ public class BinarySearch {
 
     public static void main(String args[]) {
 
-        Scanner scanner = new Scanner(System.in);
+    /*    Scanner scanner = new Scanner(System.in);
         int[] arr = new int[5];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = scanner.nextInt();
         }
-        int targ = scanner.nextInt();
-        int search = search(arr, targ);
-        System.out.println(search);
+        int targ = scanner.nextInt();*/
+
+        int[] arr = {1, 3, 5, 7, 9};
+//        int search = search(arr, targ);
+        System.out.println(templateSearch(arr, 7));
     }
 
     public static int search(int[] arr, int key) {
@@ -36,6 +38,41 @@ public class BinarySearch {
             } else {
                 return mid;
             }
+        }
+        return -1;
+    }
+
+    /**
+     * 套用模板的写法
+     *
+     * @param arr
+     * @param target
+     * @return
+     */
+    public static int templateSearch(int[] arr, int target) {
+
+        if (arr == null || arr.length == 0) {
+            return -1;
+        }
+        int start = 0, end = arr.length - 1;
+
+        while (start + 1 < end) {
+            int mid = start + ((end - start) >> 1);
+
+            if (target < arr[mid]) {
+                end = mid;
+            } else if (target > arr[mid]) {
+                start = mid;
+            } else {
+                return mid;
+            }
+        }
+
+        if (arr[start] == target) {
+            return start;
+        }
+        if (arr[end] == target) {
+            return end;
         }
         return -1;
     }
