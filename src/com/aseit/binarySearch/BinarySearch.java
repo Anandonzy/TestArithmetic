@@ -1,6 +1,4 @@
-package com.aseit.BinarySearch;
-
-import java.util.Scanner;
+package com.aseit.binarySearch;
 
 /**
  * Created with IntelliJ IDEA.

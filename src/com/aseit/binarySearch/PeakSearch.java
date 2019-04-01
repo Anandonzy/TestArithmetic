@@ -1,6 +1,4 @@
-package com.aseit.BinarySearch;
-
-import java.util.List;
+package com.aseit.binarySearch;
 
 /**
  * Created with IntelliJ IDEA.
@@ -39,9 +37,9 @@ public class PeakSearch {
 
     public static void main(String args[]) {
 
-        int[] arr = new int[]{1,2,3,4,1};
+        int[] arr = {1, 2, 3, 4, 1};
 //        answer(arr);
-        int search = binarySearch(arr);
+        int search = tempSearch(arr);
         System.out.println(search);
     }
 
@@ -89,12 +87,37 @@ public class PeakSearch {
                 end = mid - 1;
             } else if (arr[mid] < arr[mid + 1]) {
                 start = mid + 1;
-            }else{
+            } else {
                 return mid;
             }
         }
         return -1;
     }
 
+    //模板解题
+    public static int tempSearch(int[] arr) {
+        if (arr.length < 3)
+            return -1;
+        int start = 1; //不能从0开始
+        int end = arr.length - 1;
+        while (start + 1 < end) {
+            int mid = start + (end - start) / 2;
+
+            if (arr[mid] < arr[mid - 1]) {
+                end = mid;
+            } else if (arr[mid] < arr[mid + 1]) {
+                start = mid;
+            } else {
+                end = mid;
+            }
+        }
+        //double check
+
+        if (arr[start] < arr[end]) {
+            return end;
+        }else{
+            return start;
+        }
+    }
 
 }

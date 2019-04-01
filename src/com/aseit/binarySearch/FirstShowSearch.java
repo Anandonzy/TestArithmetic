@@ -1,4 +1,4 @@
-package com.aseit.BinarySearch;
+package com.aseit.binarySearch;
 
 /**
  * Created with IntelliJ IDEA.

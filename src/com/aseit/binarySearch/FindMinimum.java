@@ -1,4 +1,4 @@
-package com.aseit.BinarySearch;
+package com.aseit.binarySearch;
 
 /**
  * Created with IntelliJ IDEA.
@@ -6,6 +6,7 @@ package com.aseit.BinarySearch;
  * Date: 2019-04-01
  * Time: 21:13
  * Description:
+ * oj:https://www.lintcode.com/problem/find-minimum-in-rotated-sorted-array/description
  */
 public class FindMinimum {
     public static void main(String args[]) {
