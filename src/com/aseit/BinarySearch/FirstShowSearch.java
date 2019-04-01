@@ -61,7 +61,6 @@ public class FirstShowSearch {
     public static int answer(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
-        System.out.println("   end :" + end);
         int res = -1;
 
         while (start <= end) {
@@ -73,11 +72,9 @@ public class FirstShowSearch {
                 start = mid + 1;
             }
         }
-
         if (res != -1 && arr[res] != target) {
             return -1;
         }
-
         return res;
     }
 
