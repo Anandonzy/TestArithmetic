@@ -32,7 +32,7 @@ package com.aseit.binarySearch;
 public class Sqrt {
 
     public static void main(String args[]) {
-        System.out.println(sqrt(0));
+        System.out.println(sqrt(4187));
 
 
     }
@@ -53,9 +53,9 @@ public class Sqrt {
             if (mid == x / mid) {
                 return mid;
             } else if (mid < x / mid) {
-                end = mid;
-            }else{
                 start = mid;
+            }else{
+                end = mid;
             }
         }
 
