@@ -32,9 +32,7 @@ package com.aseit.binarySearch;
 public class Sqrt {
 
     public static void main(String args[]) {
-        System.out.println(sqrt(4187));
-
-
+        System.out.println(sqrt(9));
     }
 
     //求平方根，不能整开的话，取最后一个满足的。
@@ -50,19 +48,22 @@ public class Sqrt {
         while (start + 1 < end) {
             int mid = start + ((end - start) >> 1);
 
+            /**
+             * x 9 :1     2 3 4    5     6 7 8    9
+             *      start         mid              end
+             */
             if (mid == x / mid) {
                 return mid;
             } else if (mid < x / mid) {
                 start = mid;
-            }else{
+            } else {
                 end = mid;
             }
         }
 
         //check 返回start即可。
-        if(end > end /x)
+        if (end > end / x)
             return start;
         return end;
     }
-
 }
