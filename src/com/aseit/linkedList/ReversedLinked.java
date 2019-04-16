@@ -7,11 +7,9 @@ package com.aseit.linkedList;
  * Time: 21:06
  * Description:
  * oj:https://www.lintcode.com/problem/reverse-linked-list/description
- * 不是和清楚链表这种如何运行测试。
+ * 。
  */
 public class ReversedLinked {
-
-
     //   Definition for ListNode
     public static class ListNode {
         int val;
@@ -21,35 +19,17 @@ public class ReversedLinked {
             this.val = val;
         }
     }
-
-
-    public static void main(String args[]) {
-    }
-
     public static ListNode reverse(ListNode head) {
-        if (head == null || head.next == null) {
-            return head;
-        }
-
         ListNode preNode = null;
         ListNode currNode = head;
-        ListNode nextNode = head.next;
 
-        //1 - 2 - 3
-        //
-        while (head.next != null) {
-
-            if (currNode.next == null) {
-                currNode = preNode;
-                head = currNode;
-                break;
-            }
-            currNode = preNode;
+        while(currNode !=null){
+            ListNode temp = currNode.next;
+            currNode.next = preNode;
             preNode = currNode;
-            currNode = nextNode;
-            nextNode = nextNode.next;
+            currNode = temp;
         }
-        return head;
+        return preNode;
     }
 }
 
