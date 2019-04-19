@@ -12,9 +12,9 @@ package com.aseit.Array;
 public class QuickSort {
 
     public static void main(String args[]) {
-        int[] A = {3, 2, 1,3,4,52,1};
+        int[] A = {3, 2, 1, 3, 4, 52, 1};
         quickSort(A, 0, A.length - 1);
-        for(int a : A){
+        for (int a : A) {
             System.out.println(a);
 
         }
@@ -26,7 +26,7 @@ public class QuickSort {
         }
 
         int left = start, right = end;
-        int pivot = A[(start + end) / 2];
+        int pivot = A[(start + end) >> 1];
 
         while (left <= right) {
             while (left <= right && A[left] < pivot) {
@@ -49,4 +49,4 @@ public class QuickSort {
         quickSort(A, left, end);
     }
 
-    }
+}

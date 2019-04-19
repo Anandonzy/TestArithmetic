@@ -8,7 +8,7 @@ import java.util.List;
  * User: @ziyu  freedomziyua@gmail.com
  * Date: 2019-04-17
  * Time: 10:55
- * Description:
+ * Description:出现最多的一个元素，超过集合一半长度。
  */
 public class MajorityElement {
 

@@ -10,15 +10,13 @@ package com.aseit.Array;
  * 求子数组最大的和
  */
 
-import org.omg.CORBA.MARSHAL;
-
 /**
  * 思路，前一个减去之前数里面差值最大的就是以右边届最大的子数组
  */
 public class MaximumSubarray {
 
     public static void main(String args[]) {
-        int[] A = new int[]{-2,2,-3,4,-1,2,1,-5,3};
+        int[] A = new int[]{-2, 2, -3, 4, -1, 2, 1, -5, 3};
         System.out.println(maxSubArray(A));
 
     }
